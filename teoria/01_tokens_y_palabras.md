@@ -20,6 +20,6 @@ En este punto es donde entramos a la diferenciación entre *Types* vs. *Instance
 
 -   "*El gato y el perro, juntos, se comen el plato."*
 
-Si dejamos de lado las puntuaciones, y nos preguntamos cuántas palabras hay, tendríamos que responder que hay 10 palabras... pero también hay sólo 8 palabras. ¿Por qué? Las **ocurrencias o instancias** (tokens/*word instances*) serían 10 (o 13 en caso de que contemos las puntuaciones): es el conteo bruto, se cuenta cada palabra que se vea al pasar la mirada. Al mismo tiempo, tenemos 8 **tipos** (*word* *types*)
+Si dejamos de lado las puntuaciones, y nos preguntamos cuántas palabras hay, tendríamos que responder que hay 10 palabras... pero también hay sólo 8 palabras. ¿Por qué? Las **ocurrencias o instancias** (tokens/*word instances*) serían 10 (o 13 en caso de que contemos las puntuaciones): es el conteo bruto, se cuenta cada palabra que se vea al pasar la mirada. Al mismo tiempo, tenemos 8 **tipos** (*word* *types*), el conteo de palabras únicas en nuestro vocabulario (sin repetir).
 
-##
+¡Sorpresa! De aquí surgen nuevas interrogantes. Normalmente, en las herramientas de NLP actuales los signos de puntuación cuentan, ya que como vimos anteriormente, cambian los significados de las frases. ¿Pero qué ocurre con la disfluencia? Depende de la aplicación, pero hay que tener en cuenta que un "eh..." (*filler*) o una palabra cortada (*fragment*) puede denotar un cambio de idea, una duda o una pausa. Después, en cuanto al conteo de tipos, ¿una palabra en mayúsculas o minúsculas cuentan como un tipo distinto? Nuevamente depende de lo que queramos hacer, pero teniendo en cuenta que *apple* como manzana es distinto a *Apple* como empresa.
