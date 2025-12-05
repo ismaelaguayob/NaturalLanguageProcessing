@@ -1,0 +1,25 @@
+# Tokens y Palabras
+
+En Procesamiento de Lenguaje Natural (NLP) trabajamos básicamente con patrones en palabras. Esta afirmación, sencilla en su enunciación, implica desentrañar un montón de definiciones y comprender ciertos conceptos técnicos necesarios para el desarrollo de estos métodos. Por tanto, no será extraño que entremos a discusiones propias de la lingüística y no solo de las ciencias de la computación.
+
+## Las Palabras 
+
+Al adentrarnos en el mundo del NLP, solemos encontrarnos con una identificación, por lo general errónea, entre "palabras" y "tokens". La definición de palabra, no obstante, conlleva en sí misma todo un prisma de discusiones, tanto entre diferentes disciplinas del conocimiento como dentro de estas mismas.
+
+Dentro de la lingüísitca, por ejemplo, podemos encontrar definiciones más estructuralistas, otra definición para los generativistas, la lingüística cognitiva o el funcionalismo. Eso ocurre también en el caso de la visión operacional del NLP donde, por ejemplo, Dan Jurafsky y James H. Martin, señalan que para la computadora, una palabra es a menudo simplemente una cadena de caracteres entre dos espacios (o signos de puntuación). Pero esto trae problemas: ¿"Nueva York" es una palabra o dos? ¿"Dámelo" es una o tres (da-me-lo)?
+
+Hay un cierto concenso en que los signos de puntuación como los puntos, comas, dos puntos, etc. no son palabras en sí, sino más bien herramientas del sistema ortográfico y no del sistema léxico (vocabulario). Sin embargo, esto no los hace menos importantes: entregan información sobre el ritmo, la entonación o las pausas, e incluso pueden ser cruciales para evitar ambigüedades en ciertas frases. El típico ejemplo de la negación, es muy distinto decir "no lo dejé apagado" a "no, lo dejé apagado". Desde el punto de vista operacional, a diferencia del lingüístico tradicional, en NLP y en los Modelos de Lenguage Masivos (LLM) generalmente los signos de puntuación son contados como palabras separadas.
+
+Hay otros problemas que pueden surgir a la hora de analizar palabras escritas sobre lenguaje hablado. Uno de estos es la disfluencia, en términos lingüísticos serían las interrupciones en el "flujo normal" del habla. En la fonoaudiología podría asociarse más rápidamente a la tartamudez, pero todos hablamos con disfluencia de vez en cuando:
+
+-   *"Ehh... no sé... mien- mientras tengamos tiempo"*
+
+En este ejemplo hay rellenos (*fillers*)como el *"Ehh"* y hay fragmentos (*fragments*), como el "mien-", es decir, cuando se "traba".
+
+En este punto es donde entramos a la diferenciación entre *Types* vs. *Instances* (Tipos vs. Ocurrencias), que tiene que ver con tipos de conteos de palabras que podemos hacer.
+
+-   "*El gato y el perro, juntos, se comen el plato."*
+
+Si dejamos de lado las puntuaciones, y nos preguntamos cuántas palabras hay, tendríamos que responder que hay 10 palabras... pero también hay sólo 8 palabras. ¿Por qué? Las **ocurrencias o instancias** (tokens/*word instances*) serían 10 (o 13 en caso de que contemos las puntuaciones): es el conteo bruto, se cuenta cada palabra que se vea al pasar la mirada. Al mismo tiempo, tenemos 8 **tipos** (*word* *types*)
+
+##
